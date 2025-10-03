@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!--
 	README for: my-portfolio
 	Framework: React + Vite + Tailwind
