@@ -110,7 +110,7 @@ const Hero = () => {
               {/* Profile image container - no border, blended with blobs */}
               <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl z-10 mx-auto">
                 <img 
-                  src="/src/assets/photo.jpeg" 
+                  src={profileImage} 
                   alt="Yuvaraj - Full Stack Developer" 
                   className="w-full h-full object-cover opacity-90"
                 />
