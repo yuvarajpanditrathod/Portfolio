@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* background and color are set inline to ensure immediate visual change when toggling themes */
+  color-scheme: light;
+}
+
+/* Prevent flash of unstyled content during theme transitions */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Dark mode base adjustments */
+:root.dark, .dark {
+  color-scheme: dark;
+}
+
+/* Tailwind's `dark` class is placed on <html>, but allow styling using .dark as fallback */
+html.dark body, :root.dark body, .dark body {
+  background-color: #0b1220; /* dark background */
+  color: #f8fafc; /* light text */
+}
+
+@layer components {
+  .section-title {
+    @apply text-3xl font-bold text-blue-600 dark:text-blue-400 mb-6;
+  }
+
+  .skill-card {
+    @apply bg-blue-100 dark:bg-gray-800 p-4 rounded-xl shadow text-blue-700 dark:text-blue-300 font-semibold;
+  }
+
+  .btn {
+    @apply inline-block px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition;
+  }
+}
+
+/* Animations */
+@layer utilities {
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-out both;
+  }
+
+  .animate-slideUp {
+    animation: slideUp 1s ease-out both;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer utilities {
+  .animate-fadeDown {
+    animation: fadeDown 0.4s ease-out both;
+  }
+  .animate-slideDown {
+    animation: slideDown 0.3s ease-out both;
+  }
+
+  @keyframes fadeDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 2s infinite linear;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) skewX(-12deg);
+    }
+    100% {
+      transform: translateX(200%) skewX(-12deg);
+    }
+  }
+}
