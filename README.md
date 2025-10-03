@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!--
 	README for: my-portfolio
 	Framework: React + Vite + Tailwind
@@ -60,127 +61,106 @@ npm install
 
 # Start dev server
 npm run dev
+---
 
-# Build for production
-npm run build
+# Yuvaraj — Developer Portfolio
 
-# Preview production build locally
-npm run preview
-```
-
-If you use yarn or pnpm, replace the commands accordingly (e.g., `pnpm install`).
-
-## Clear View — Project structure and how it maps to the site
-
-Top-level files you'll care about:
-
-- `index.html` — Vite entry HTML
-- `package.json` — scripts and dependencies
-- `vite.config.js` — Vite configuration
-- `tailwind.config.js` + `postcss` files — Tailwind setup
-
-Source code (important folder): `src/`
-
-- `main.jsx` — App bootstrap, React root render and global providers
-- `App.jsx` — Root app component that composes page sections and applies layout
-- `index.css`, `App.css` — Global styles and Tailwind directives
-
-Major folders
-
-- `src/components/` — Presentational React components used to build the page
-	- `Navbar.jsx` — Top navigation and theme toggle
-	- `Hero.jsx` — Main header section with name, headline, call-to-action
-	- `About.jsx` — Short bio and resume link
-	- `Skills.jsx` — Skill list / icons
-	- `Experience.jsx` — Timeline or experience cards
-	- `Projects.jsx` — Project cards with links/screenshots
-	- `Contact.jsx` — Contact form or contact links
-	- `Footer.jsx` — Footer links, copyright
-
-- `src/contexts/ThemeContext.jsx` — Theme provider and hook for dark/light mode
-
-- `src/assets/` — Images, resume PDF, and icons used across the site
-
-How it renders: `main.jsx` -> `App.jsx` -> components in `src/components/*` (Hero, About, Skills, ...) — the app is a single page with sections arranged vertically and navigable from the `Navbar`.
-
-Visual layout (logical order of sections)
-
-1. Navbar (site navigation + resume link + theme toggle)
-2. Hero (name, short headline, CTA)
-3. About (bio, resume download)
-4. Skills (icons/list)
-5. Experience (timeline/cards)
-6. Projects (cards, links to project demos / repos)
-7. Contact (email / social links / form)
-8. Footer (copyright)
-
-## Component map (quick reference)
-
-- `Navbar.jsx` — handles navigation, mobile menu, theme switch. Connects to `ThemeContext`.
-- `Hero.jsx` — hero header copy, background image (if any) and primary CTA (scroll or contact link).
-- `About.jsx` — paragraph and resume download link (`src/assets/Yuvaraj-Resume.pdf`).
-- `Skills.jsx` — uses icons from `react-icons` / `lucide-react` to present core skills.
-- `Experience.jsx` — lists jobs, roles, and durations.
-- `Projects.jsx` — each project card shows title, description, tech, and links to live / repo.
-- `Contact.jsx` — mailto link or contact form (if implemented) that posts to chosen endpoint.
-- `Footer.jsx` — small site footer and external links.
-
-Files to edit when customizing
-
-- `src/components/*` — content and layout
-- `src/assets/*` — images, resume, logos
-- `tailwind.config.js` — theme, colors, fonts
-
-## Development tips
-
-- Change copy (bio, projects, links) inside the component files for quick updates.
-- Keep images in `src/assets` and import them into components to let Vite optimize them.
-- Use `ThemeContext.jsx` to add or tweak dark/light styles; prefer Tailwind's `dark:` variants.
-- Linting: run `npm run lint` and fix reported issues. ESLint is configured in the repo.
-
-## Deployment
-
-This project builds to static assets using `npm run build`. You can deploy the `dist/` folder to any static host, e.g., GitHub Pages, Netlify, Vercel, or an S3 static site.
-
-Recommended quick deployments:
-
-- Vercel: connect the GitHub repo and use the default build command `npm run build` and `dist` as output.
-- Netlify: drag & drop the `dist` folder or connect repo and set build command `npm run build` and publish directory `dist`.
-
-Add a production environment variable or site-specific config if you need analytics or form endpoints.
-
-## Accessibility & SEO notes
-
-- Use semantic HTML elements (header, main, nav, footer, section) for structure.
-- Ensure images have `alt` text and links have descriptive labels.
-- For better SEO, add meta tags and opengraph tags in `index.html`.
-
-## Tests & Quality gates (suggested)
-
-- Add unit tests with Jest + React Testing Library for critical components.
-- Add Lighthouse checks in CI to measure performance and accessibility.
-
-## Troubleshooting
-
-- If the dev server fails to start: delete `node_modules` and `package-lock.json`, then run `npm install` again.
-- If Tailwind classes don’t apply, ensure `index.css` includes Tailwind directives and `tailwind.config.js` content paths include `src/**/*`.
-
-## License
-
-Add your preferred license here (e.g., MIT). If this is a personal portfolio, you can state "All rights reserved" or a permissive license.
-
-## Contact
-
-- Author: yuvarajpanditrathod
-- Resume: `src/assets/Yuvaraj-Resume.pdf`
-- Add your e‑mail and social links in `Footer.jsx` / `Navbar.jsx`.
+A clean, single-page developer portfolio built with React + Vite and styled with Tailwind CSS. This repo provides the full source for a personal portfolio site: hero, about, skills, experience, projects, contact, and footer.
 
 ---
 
-If you'd like, I can:
+## Quick start (Windows PowerShell)
 
-- Add a short deploy workflow for GitHub Actions
-- Generate a minimal Lighthouse CI configuration
-- Add meta tags and an SEO-optimized `index.html`
+Open PowerShell in the project root (`d:\Portfolio\my-portfolio`) and run:
 
-Tell me which of those you'd like next and I’ll implement it.
+```powershell
+npm install
+npm run dev      # start development server (HMR)
+npm run build    # production build -> creates `dist/`
+npm run preview  # preview production build locally
+```
+
+If you use yarn or pnpm, use those package-manager equivalents.
+
+---
+
+## Clear View — project at-a-glance
+
+Purpose: showcase skills, projects, and contact info in a fast, responsive single-page app.
+
+Core files & folders:
+
+- `index.html` — app entry
+- `package.json` — scripts & dependencies
+- `vite.config.js` — Vite config
+- `tailwind.config.js` — Tailwind setup
+- `src/`
+	- `assets/` — images, resume PDF (e.g. `Yuvaraj-Resume.pdf`)
+	- `components/` — UI sections (Navbar, Hero, About, Skills, Experience, Projects, Contact, Footer)
+	- `contexts/ThemeContext.jsx` — theme provider
+	- `main.jsx` — app bootstrap
+	- `App.jsx` — app composition
+	- `index.css` / `App.css` — global styles
+
+Render flow: `main.jsx` → `App.jsx` → section components in `src/components/` (vertical single-page layout).
+
+Logical section order shown in the UI:
+1. Navbar (nav, resume link, theme toggle)
+2. Hero (headline, CTA)
+3. About (bio + resume download)
+4. Skills (icons/list)
+5. Experience (timeline/cards)
+6. Projects (cards with links)
+7. Contact (email / social links / form)
+8. Footer
+
+---
+
+## Component map (one-line summary)
+
+- `Navbar.jsx` — top navigation, mobile menu, theme switch
+- `Hero.jsx` — main header with name and CTA
+- `About.jsx` — bio and resume download
+- `Skills.jsx` — tech/skill icons
+- `Experience.jsx` — work/education timeline
+- `Projects.jsx` — project cards with links
+- `Contact.jsx` — contact links or form
+- `Footer.jsx` — social links and copyright
+
+---
+
+## Customize (3 quick edits)
+
+1. Edit text and project details in `src/components/*`.
+2. Replace images and the resume in `src/assets/`.
+3. Update colors/fonts in `tailwind.config.js`.
+
+---
+
+## Deploy (quick)
+
+- Vercel: import the repo, use `npm run build`.
+- Netlify: set build command `npm run build`, publish directory `dist`.
+- GitHub Pages: build then publish `dist/` (or use a deploy action).
+
+---
+
+## Good-to-have improvements (I can add any of these)
+
+- CI workflow to build & deploy (GitHub Actions)
+- Add meta + Open Graph tags to `index.html` for SEO
+- Lighthouse/A11y checks in CI
+- Simple contact form integration (Netlify Forms / Formspree)
+
+---
+
+## Contact
+
+- Author: Yuvaraj
+- Resume: `src/assets/Yuvaraj-Resume.pdf`
+- Edit `src/components/Footer.jsx` and `Navbar.jsx` to add email and social links.
+
+---
+
+If you'd like, I can add a GitHub Actions deploy workflow or insert SEO meta tags next — tell me which and I will implement it.
+- If the dev server fails to start: delete `node_modules` and `package-lock.json`, then run `npm install` again.
