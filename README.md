@@ -3,164 +3,79 @@
 	README for: my-portfolio
 	Framework: React + Vite + Tailwind
 	Author: yuvarajpanditrathod (repo owner)
-	Purpose: Developer portfolio site source + instructions
--->
+	# Yuvaraj — Developer Portfolio
 
-# My Portfolio
+	A simple, fast, single-page developer portfolio built with React + Vite and styled with Tailwind CSS. This repo contains the source for the site (Hero, About, Skills, Experience, Projects, Contact, Footer) and an automated Pages deploy workflow.
 
-A modern, responsive developer portfolio built with React and Vite, styled with Tailwind CSS, and enhanced with Framer Motion and small UI libraries. This repository contains the source for a single-page portfolio app showcasing About, Skills, Experience, Projects, and Contact sections.
+	Live demo: (paste your GitHub Pages URL here after first deploy)
 
-Live demo: (add your deployed URL here)
+	---
 
-Quick links
+	## Quick start (Windows PowerShell)
 
-- Code: this repo
-- Author: yuvarajpanditrathod
+	Open PowerShell in the repository root (`d:\Portfolio\my-portfolio`) and run:
 
-## Table of contents
+	```powershell
+	npm install
+	npm run dev      # start development server with HMR
+	npm run build    # production build -> creates `dist/`
+	npm run preview  # preview production build locally
+	```
 
-- What this project is
-- Features
-- Tech stack
-- Quick start (Windows PowerShell)
-- Project structure (Clear View)
-- Component map (what each file does)
-- Development tips
-- Deployment
-- Accessibility & SEO notes
-- License & contact
+	If you prefer `pnpm` or `yarn`, use the equivalent commands.
 
-## What this project is
+	---
 
-This is a personal portfolio site built for showcasing professional details, projects, skills, and contact information. It uses Vite for a fast dev experience, React for UI composition, Tailwind for utility-first styling, and Framer Motion for subtle animations.
+	## Clear view — where to edit
 
-## Features
+	Core source locations:
 
-- Fast local dev server with HMR
-- Responsive layout optimized for desktop and mobile
-- Sections: Hero, About, Skills, Experience, Projects, Contact, Footer
-- Dark/light theme support via `ThemeContext`
-- Simple, accessible forms/links for contact and resume download
+	- `src/components/` — main UI sections (Navbar, Hero, About, Skills, Experience, Projects, Contact, Footer)
+	- `src/assets/` — images and `Yuvaraj-Resume.pdf`
+	- `src/contexts/ThemeContext.jsx` — dark/light theme provider
+	- `src/main.jsx` and `src/App.jsx` — app bootstrap and composition
+	- `vite.config.js`, `tailwind.config.js` — build and styling configs
 
-## Tech stack
+	Render order (page layout): Navbar → Hero → About → Skills → Experience → Projects → Contact → Footer
 
-- React 19
-- Vite (dev build tool)
-- Tailwind CSS
-- Framer Motion (animations)
-- React Icons / Lucide
-- ESLint for linting
+	---
 
-## Quick start (Windows PowerShell)
+	## Deployment (GitHub Pages)
 
-These commands assume you have Node.js (recommended >= 18) and npm installed. Open PowerShell in the repo root (`d:\Portfolio\my-portfolio`) and run:
+	- This repo includes a workflow that builds and deploys the `dist/` folder to GitHub Pages on pushes to `main`.
+	- Important: the app must use correct base paths so assets load from the Pages subpath. `vite.config.js` already contains `base: '/Portfolio/'` for this repository. If you deploy to a custom domain, update/remove `base` accordingly.
+	- After pushing to `main`, check Actions → Deploy static content to Pages. When the run completes you should see the Pages URL in the workflow output or in Settings → Pages.
 
-```powershell
-# Install dependencies
-npm install
+	---
 
-# Start dev server
-npm run dev
----
+	## Quick customization checklist
 
-# Yuvaraj — Developer Portfolio
+	1. Edit text or project entries under `src/components/Projects.jsx`.
+	2. Replace images and resume in `src/assets/`.
+	3. Update colors or fonts in `tailwind.config.js`.
 
-A clean, single-page developer portfolio built with React + Vite and styled with Tailwind CSS. This repo provides the full source for a personal portfolio site: hero, about, skills, experience, projects, contact, and footer.
+	---
 
----
+	## Troubleshooting
 
-## Quick start (Windows PowerShell)
+	- If CSS or JS return 404 on the published site, ensure `vite.config.js`'s `base` matches your Pages path (e.g., `/Portfolio/`).
+	- If `npm ci` or `npm install` fails on Windows with EPERM errors for native binaries, close editors/terminals using the project and retry; removing `node_modules` and `package-lock.json` and running `npm install` can help.
 
-Open PowerShell in the project root (`d:\Portfolio\my-portfolio`) and run:
+	---
 
-```powershell
-npm install
-npm run dev      # start development server (HMR)
-npm run build    # production build -> creates `dist/`
-npm run preview  # preview production build locally
+	## Contact & license
+
+	- Author: Yuvaraj
+	- Resume: `src/assets/Yuvaraj-Resume.pdf`
+	- License: add your preferred license (e.g., MIT) or "All rights reserved".
+
+	---
+
+	If you want, I can add:
+
+	- A Pages status badge to the README
+	- A GitHub Actions step to run lint/tests before deploy
+	- SEO meta tags and Open Graph tags in `index.html`
+
+	Tell me which and I will implement it.
 ```
-
-If you use yarn or pnpm, use those package-manager equivalents.
-
----
-
-## Clear View — project at-a-glance
-
-Purpose: showcase skills, projects, and contact info in a fast, responsive single-page app.
-
-Core files & folders:
-
-- `index.html` — app entry
-- `package.json` — scripts & dependencies
-- `vite.config.js` — Vite config
-- `tailwind.config.js` — Tailwind setup
-- `src/`
-	- `assets/` — images, resume PDF (e.g. `Yuvaraj-Resume.pdf`)
-	- `components/` — UI sections (Navbar, Hero, About, Skills, Experience, Projects, Contact, Footer)
-	- `contexts/ThemeContext.jsx` — theme provider
-	- `main.jsx` — app bootstrap
-	- `App.jsx` — app composition
-	- `index.css` / `App.css` — global styles
-
-Render flow: `main.jsx` → `App.jsx` → section components in `src/components/` (vertical single-page layout).
-
-Logical section order shown in the UI:
-1. Navbar (nav, resume link, theme toggle)
-2. Hero (headline, CTA)
-3. About (bio + resume download)
-4. Skills (icons/list)
-5. Experience (timeline/cards)
-6. Projects (cards with links)
-7. Contact (email / social links / form)
-8. Footer
-
----
-
-## Component map (one-line summary)
-
-- `Navbar.jsx` — top navigation, mobile menu, theme switch
-- `Hero.jsx` — main header with name and CTA
-- `About.jsx` — bio and resume download
-- `Skills.jsx` — tech/skill icons
-- `Experience.jsx` — work/education timeline
-- `Projects.jsx` — project cards with links
-- `Contact.jsx` — contact links or form
-- `Footer.jsx` — social links and copyright
-
----
-
-## Customize (3 quick edits)
-
-1. Edit text and project details in `src/components/*`.
-2. Replace images and the resume in `src/assets/`.
-3. Update colors/fonts in `tailwind.config.js`.
-
----
-
-## Deploy (quick)
-
-- Vercel: import the repo, use `npm run build`.
-- Netlify: set build command `npm run build`, publish directory `dist`.
-- GitHub Pages: build then publish `dist/` (or use a deploy action).
-
----
-
-## Good-to-have improvements (I can add any of these)
-
-- CI workflow to build & deploy (GitHub Actions)
-- Add meta + Open Graph tags to `index.html` for SEO
-- Lighthouse/A11y checks in CI
-- Simple contact form integration (Netlify Forms / Formspree)
-
----
-
-## Contact
-
-- Author: Yuvaraj
-- Resume: `src/assets/Yuvaraj-Resume.pdf`
-- Edit `src/components/Footer.jsx` and `Navbar.jsx` to add email and social links.
-
----
-
-If you'd like, I can add a GitHub Actions deploy workflow or insert SEO meta tags next — tell me which and I will implement it.
-- If the dev server fails to start: delete `node_modules` and `package-lock.json`, then run `npm install` again.
