@@ -224,17 +224,6 @@ const Experience = () => {
             Feel free to reach out if you'd like to discuss my background or potential opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={resumePDF}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
-              aria-label="View Resume"
-              title="View Resume"
-            >
-              <ExternalLink className="w-4 h-4" />
-              View Resume
-            </a>
             <button className="px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium rounded-full hover:border-blue-500 hover:text-blue-500 transition-all duration-300">
               Contact Me
             </button>

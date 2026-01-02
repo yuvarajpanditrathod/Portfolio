@@ -1,7 +1,6 @@
 import React from 'react';
 import { Download, Mail } from 'lucide-react';
 import profileImage from '../assets/photo.jpeg';
-import resumePDF from '../assets/Yuvaraj-Resume.pdf';
 
 const About = () => {
   return (
@@ -58,39 +57,18 @@ const About = () => {
 
             <div className="space-y-6 text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
               <p>
-                Hi there! I'm <span className="font-semibold text-gray-900 dark:text-white">Yuvaraj</span>, a passionate full-stack developer 
-                with a love for creating innovative digital solutions. I specialize in building modern, 
-                responsive web applications that deliver exceptional user experiences.
+                Hello! I'm <span className="font-semibold text-gray-900 dark:text-white">Yuvaraj</span>, a results-driven full-stack developer dedicated to building impactful digital solutions. My focus is on delivering robust, scalable, and user-centric web applications.
               </p>
-              
               <p>
-                With expertise in <span className="font-semibold text-blue-600">React</span>, 
-                <span className="font-semibold text-green-600"> Node.js</span>, and 
-                <span className="font-semibold text-purple-600"> modern web technologies</span>, 
-                I bring ideas to life through clean, efficient code and thoughtful design.
+                I have proven expertise in <span className="font-semibold text-blue-600">React</span>,<span className="font-semibold text-green-600"> Node.js</span>, and <span className="font-semibold text-purple-600">modern web technologies</span>. My approach combines clean code, thoughtful design, and a commitment to best practices.
               </p>
-
               <p>
-                When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
-                or sharing knowledge with the developer community. I believe in continuous learning and staying 
-                ahead of the curve in this ever-evolving tech landscape.
+                Beyond coding, I am passionate about continuous learning, open-source collaboration, and sharing knowledge within the tech community. I thrive on new challenges and believe in the power of technology to drive positive change.
               </p>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-8">
-              <a
-                href={resumePDF}
-                download
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
-                aria-label="Download Resume"
-                title="Download Resume"
-              >
-                <Download className="w-4 h-4" />
-                Download Resume
-              </a>
               <button className="flex items-center justify-center gap-2 px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium rounded-full hover:border-blue-500 hover:text-blue-500 transition-all duration-300">
                 <Mail className="w-4 h-4" />
                 Let's Connect

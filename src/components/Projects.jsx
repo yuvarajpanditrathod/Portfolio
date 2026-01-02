@@ -3,6 +3,62 @@ import { Github, ExternalLink, Code, Database, Smartphone, Brain, Shield } from 
 
 const Projects = () => {
   const projects = [
+        {
+          id: 7,
+          title: "Stock Broker Client Web Dashboard",
+          description:
+            "A modern real-time stock trading platform for live stock price tracking, portfolio management, and interactive charts. Features secure authentication, responsive UI, and real-time WebSocket updates.",
+          image: "https://github.com/yuvarajpanditrathod/Stock-Broker-Client-Web-Dashboard/blob/main/Frontend/public/Dashboard.png?raw=true",
+          technologies: [
+            "React",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "WebSocket",
+            "JWT Auth",
+            "Material UI"
+          ],
+          githubUrl: "https://github.com/yuvarajpanditrathod/Stock-Broker-Client-Web-Dashboard",
+          liveUrl: "https://stock-broker-frontend.onrender.com/",
+          category: "Full Stack",
+        },
+        {
+          id: 8,
+          title: "LinkedIn Clone (MERN)",
+          description:
+            "A professional, full-stack LinkedIn clone built with the MERN stack. Implements social networking features: feed, profiles, connections, messaging, onboarding, notifications, and image uploads.",
+          image: "https://github.com/yuvarajpanditrathod/LinkedIn-Clone-using-MERN-Stack/blob/main/uploads/dashboard.png?raw=true",
+          technologies: [
+            "React",
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "MERN",
+            "JWT Auth",
+            "Bootstrap"
+          ],
+          githubUrl: "https://github.com/yuvarajpanditrathod/LinkedIn-Clone-using-MERN-Stack",
+          liveUrl: "https://linked-in-clone-using-mern-stack.vercel.app/",
+          category: "Full Stack",
+        },
+        {
+          id: 9,
+          title: "5G Network Slicing Orchestration Platform",
+          description:
+            "A professional-grade 5G network slicing orchestration platform with dynamic resource allocation, adaptive QoS, and intelligent traffic handling for URLLC, eMBB, and mMTC. Integrates SDN, NFV, and NS3 simulation.",
+          image: "https://media.assettype.com/outlookbusiness/import/uploadimage/library/16_9/16_9_5/IMAGE_1651584902.webp?w=1200&h=675&auto=format%2Ccompress&fit=max&enlarge=true",
+          technologies: [
+            "Python",
+            "SDN",
+            "NFV",
+            "NS3",
+            "Mininet",
+            "Prometheus",
+            "Grafana"
+          ],
+          githubUrl: "https://github.com/yuvarajpanditrathod/5G-Network-Slicing-using-SDN-NFV-and-NS3",
+          category: "AI/ML",
+        },
     {
       id: 1,
       title: "Intrusion Detection & Prevention System (IDPS) Network Dashboard",

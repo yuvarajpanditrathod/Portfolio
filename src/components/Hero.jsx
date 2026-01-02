@@ -28,13 +28,13 @@ const Hero = () => {
               <p className="text-blue-600 dark:text-blue-400 font-medium tracking-wide uppercase text-sm">
               </p>
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                <span className="text-gray-900 dark:text-white">Hi there, I'm </span>
+                <span className="text-gray-900 dark:text-white">I'm </span>
                 <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 text-transparent bg-clip-text">
                   Yuvaraj
                 </span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg">
-                I craft exceptional digital experiences with modern web technologies and creative problem-solving.
+                Professional Full-Stack Developer | Building scalable, high-impact web solutions with a passion for innovation and excellence.
               </p>
             </div>
 
@@ -65,14 +65,14 @@ const Hero = () => {
                 onClick={() => scrollToSection('projects')}
                 className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                View My Projects
+                Explore My Work
                 <span className="ml-2 group-hover:translate-x-1 transition-transform inline-block">→</span>
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:border-blue-500 hover:text-blue-500 dark:hover:border-blue-400 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-all duration-300"
               >
-                Get In Touch
+                Contact Me
               </button>
             </div>
 

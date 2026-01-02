@@ -40,11 +40,12 @@ const Skills = () => {
     }
   ];
 
-  const certifications = [
 
+  const certifications = [
     { name: "Internship Certificate – Full Stack Development", issuer: "Athreya Technologies Pvt. Ltd.", year: "2023" },
     { name: "Research Paper Presentation & Publication – Hospital Readmission Risk Prediction using Ensemble Learning", issuer: "3rd International Conference on Futuristic Technologies (INCOFT 2025), Pune, India", year: "2025" },
-    { name: "Research Paper Presentation & Publication – Cyber Threat Detection and Prevention using AI-ML Model Hybrid Approach", issuer: "1st International Conference on Artificial Inteligence and Computing (ICAIC 2025), Jaipur, India", year: "2025" }
+    { name: "Research Paper Presentation & Publication – Cyber Threat Detection and Prevention using AI-ML Model Hybrid Approach", issuer: "1st International Conference on Artificial Inteligence and Computing (ICAIC 2025), Jaipur, India", year: "2025" },
+    { name: "Research Paper Presentation & Publication – Secure Network Slicing in 5G With SDN and NFV", issuer: "IEEE ETCOM 2025, Ujire, Karnataka, India", year: "2025" }
   ];
 
   return (
@@ -176,13 +177,13 @@ const Skills = () => {
         {/* CTA Section */}
         <div className="text-center mt-16">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-            Ready to work together?
+            Interested in working together?
           </h3>
           <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            I'm always excited to take on new challenges and create amazing digital experiences.
+            Open to new opportunities, collaborations, and challenging projects. Let’s connect and create something exceptional.
           </p>
           <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
-            Let's Build Something Amazing
+            Start a Conversation
           </button>
         </div>
       </div>
