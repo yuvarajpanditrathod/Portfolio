@@ -6,7 +6,7 @@
 -->
 
 <div align="center">
-  <img src="public/favicon.svg" width="80" alt="Logo" />
+  <img src="[public/favicon.svg](https://avatars.githubusercontent.com/u/106370935?v=4)" width="80" alt="Logo" />
   
   <h1>Yuvaraj P Rathod — Professional Portfolio</h1>
   <p>
