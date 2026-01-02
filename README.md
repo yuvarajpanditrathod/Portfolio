@@ -5,7 +5,6 @@
   Author: Yuvaraj
 -->
 
-src/
 <div align="center">
   <img src="public/favicon.svg" width="80" alt="Logo" />
   
@@ -20,9 +19,16 @@ src/
 </div>
 
 
-## 🚀 Live Demo
 
-> [View Portfolio Online](#) <!-- Add your deployed URL here -->
+<h2 align="center">🚀 Live Portfolio</h2>
+
+<div align="center">
+  <a href="https://yuvarajpanditrathod.github.io/Portfolio/" target="_blank" style="font-size:1.2em; font-weight:bold; color:#2563eb; text-decoration:none;">
+    <img src="https://img.shields.io/badge/Live%20Demo-Portfolio-blue?style=for-the-badge&logo=vercel" alt="Live Demo" />
+    <br/>
+    https://yuvarajpanditrathod.github.io/Portfolio/
+  </a>
+</div>
 
 ---
 
@@ -37,61 +43,24 @@ src/
 
 ---
 
-## 🛠️ Quick Start
 
-**Prerequisites:** Node.js >= 18, npm
 
-```sh
-git clone https://github.com/yuvarajpanditrathod/Portfolio.git
-cd Portfolio
-npm install
-npm run dev       # Start local dev server
-npm run build     # Production build
-npm run preview   # Preview production build
-```
 
----
-
-## 📁 Project Structure
-
-```
-src/
-  assets/        # Images, resume
-  components/    # All React components
-  contexts/      # Context providers
-  App.jsx        # Main app layout
-  main.jsx       # Entry point
-public/
-  favicon.svg    # Custom favicon
-index.html       # HTML template
-vite.config.js   # Vite config
-tailwind.config.js # Tailwind config
-```
-
----
 
 ## ⚙️ Deployment
 
-- Automated GitHub Actions workflow builds and deploys to GitHub Pages on push to `main`.
-- Ensure `vite.config.js` `base` matches your repo name for correct asset paths.
-- After deployment, your site is live at `https://<user>.github.io/<repo>/`.
+This portfolio is automatically deployed to GitHub Pages on every push to `main`.
 
 ---
 
-## 🧑‍💻 Customization
 
-- Edit content in `src/components/` for your own info, projects, and experience.
-- Replace images and resume in `src/assets/`.
-- Adjust theme and styles in `tailwind.config.js`.
 
----
 
 ## 📞 Contact
 
 - **Author:** Yuvaraj P Rathod
 - **Email:** yuvarajpanditrathod@gmail.com
 - **LinkedIn:** [yuvarajpanditrathod](https://linkedin.com/in/yuvarajpanditrathod)
-- **Resume:** [`src/assets/Yuvaraj-Resume.pdf`](src/assets/Yuvaraj-Resume.pdf)
 
 ---
 
@@ -118,14 +87,6 @@ tailwind.config.js # Tailwind config
 - Use semantic HTML and meaningful link text.
 - Provide descriptive `alt` attributes for images.
 - Add meta description and Open Graph tags in `index.html` for improved sharing and SEO.
-
----
-
-## Contact & license
-
-- Author: Yuvaraj
-- Resume: `src/assets/Yuvaraj-Resume.pdf`
-- License: add your preferred license (e.g., MIT) or "All rights reserved".
 
 ---
 
