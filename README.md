@@ -5,60 +5,99 @@
   Author: Yuvaraj
 -->
 
-# Yuvaraj — Developer Portfolio
+src/
+<div align="center">
+  <img src="public/favicon.svg" width="80" alt="Logo" />
+  
+  <h1>Yuvaraj P Rathod — Professional Portfolio</h1>
+  <p>
+    <b>Full-Stack Developer | React • Node.js • Tailwind CSS</b><br/>
+    Building robust, scalable, and innovative digital solutions.
+  </p>
+  <a href="https://github.com/yuvarajpanditrathod/Portfolio" target="_blank">
+    <img src="https://img.shields.io/github/deployments/yuvarajpanditrathod/Portfolio/github-pages?label=Deploy&logo=github" alt="GitHub Pages Status" />
+  </a>
+</div>
 
-A fast, responsive single-page developer portfolio built with React, Vite and Tailwind CSS. The site showcases a Hero, About, Skills, Experience, Projects and Contact sections and is configured for automated deployment to GitHub Pages.
 
-Live demo: (paste your Pages URL here after deploy)
+## 🚀 Live Demo
 
-## Key highlights
-
-- Lightweight, fast static site built with Vite
-- Tailwind CSS for responsive, utility-first styling
-- Small, composable React components for each section
-- Automated GitHub Actions workflow to build and publish to Pages
+> [View Portfolio Online](#) <!-- Add your deployed URL here -->
 
 ---
 
-## Quick start (Windows PowerShell)
+## ✨ Features
 
-Prerequisites: Node.js >= 18, npm
+- Modern, responsive single-page design
+- Built with React, Vite, and Tailwind CSS
+- Modular, maintainable codebase
+- Professional sections: Hero, About, Skills, Experience, Projects, Contact
+- Automated deployment with GitHub Actions & Pages
+- SEO and accessibility best practices
 
-```powershell
-cd D:\Portfolio\my-portfolio
+---
+
+## 🛠️ Quick Start
+
+**Prerequisites:** Node.js >= 18, npm
+
+```sh
+git clone https://github.com/yuvarajpanditrathod/Portfolio.git
+cd Portfolio
 npm install
-npm run dev      # start local dev server with HMR
-npm run build    # create optimized production build in `dist/`
-npm run preview  # preview production build locally
+npm run dev       # Start local dev server
+npm run build     # Production build
+npm run preview   # Preview production build
 ```
 
-Use `pnpm` or `yarn` if you prefer those package managers.
-
 ---
 
-## Project structure (concise)
+## 📁 Project Structure
 
+```
 src/
-- assets/        # images and `Yuvaraj-Resume.pdf`
-- components/    # Navbar, Hero, About, Skills, Experience, Projects, Contact, Footer
-- contexts/      # ThemeContext (dark/light)
-- main.jsx       # app bootstrap
-- App.jsx        # app composition
-
-Config & tooling: `vite.config.js`, `tailwind.config.js`, `.github/workflows/deploy-pages.yml`
-
-Render flow: `main.jsx` → `App.jsx` → components in `src/components/` (vertical single-page layout)
-
----
-
-## Customization checklist
-
-1. Edit content: change copy, project details, and links in files under `src/components/`.
-2. Update assets: replace images and `Yuvaraj-Resume.pdf` in `src/assets/`.
-3. Style tweaks: update theme, colors, and fonts in `tailwind.config.js`.
+  assets/        # Images, resume
+  components/    # All React components
+  contexts/      # Context providers
+  App.jsx        # Main app layout
+  main.jsx       # Entry point
+public/
+  favicon.svg    # Custom favicon
+index.html       # HTML template
+vite.config.js   # Vite config
+tailwind.config.js # Tailwind config
+```
 
 ---
 
+## ⚙️ Deployment
+
+- Automated GitHub Actions workflow builds and deploys to GitHub Pages on push to `main`.
+- Ensure `vite.config.js` `base` matches your repo name for correct asset paths.
+- After deployment, your site is live at `https://<user>.github.io/<repo>/`.
+
+---
+
+## 🧑‍💻 Customization
+
+- Edit content in `src/components/` for your own info, projects, and experience.
+- Replace images and resume in `src/assets/`.
+- Adjust theme and styles in `tailwind.config.js`.
+
+---
+
+## 📞 Contact
+
+- **Author:** Yuvaraj P Rathod
+- **Email:** yuvarajpanditrathod@gmail.com
+- **LinkedIn:** [yuvarajpanditrathod](https://linkedin.com/in/yuvarajpanditrathod)
+- **Resume:** [`src/assets/Yuvaraj-Resume.pdf`](src/assets/Yuvaraj-Resume.pdf)
+
+---
+
+<div align="center">
+  <sub>© 2026 Yuvaraj P Rathod. All rights reserved.</sub>
+</div>
 ## Deployment (GitHub Pages)
 
 - This repository includes a workflow that builds and publishes the `dist/` folder to GitHub Pages when you push to `main`.
